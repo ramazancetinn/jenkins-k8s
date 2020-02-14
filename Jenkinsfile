@@ -1,5 +1,8 @@
+@Library("k8sagent@v0.1.0")
 pipeline {
-  agent any
+  agent {
+      kubernetes(k8sagent(name: 'mini+pg'))
+  }
   stages {
     stage('Build') {
       environment {
