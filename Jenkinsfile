@@ -19,7 +19,7 @@ spec:
 """
   ) {
 
-  node(POD_LABEL) {
+  node{
     stage('BUILD') {
         environment {
         DOCKERHUB_CREDS = credentials('dockerhub')
